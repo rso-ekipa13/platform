@@ -1,16 +1,11 @@
 # platform
 
-Terraform for Azure, cluster platform (Envoy Gateway, NATS, ScyllaDB, CloudNativePG, observability) and the local dev environment.
+Everything the services run on. Terraform for the Azure resources (AKS, storage, Functions), and the shared pieces inside the cluster: the Envoy API gateway, NATS, PostgreSQL (CloudNativePG), ScyllaDB and monitoring with Prometheus, Grafana and Loki. It also has the Docker Compose setup for running the whole system locally.
 
-Part of an end-to-end encrypted messenger built for *Računalniške storitve v oblaku* (UL FRI, 2026/27) by project group 13.
+Owner: Tibor Koderman. Status: planned.
 
-| | |
-|---|---|
-| Owner | Tibor Koderman |
-| Stack | Terraform, Helm, Envoy Gateway, NATS, ScyllaDB, CloudNativePG, Prometheus, Grafana, Loki |
-| Status | Planned; scaffolding starts in week 1 (27. 10.–8. 11. 2026) |
-| Architecture and plan | <https://github.com/rso-ekipa13/docs> |
+## Where this fits
 
-## Branches
+This is one of the repositories of [Pretty Good Pigeon](https://github.com/rso-ekipa13), an end-to-end encrypted messenger built by ekipa 13 for the Cloud Computing course at UL FRI (2026/27). The architecture, plan and decisions live in [docs](https://github.com/rso-ekipa13/docs).
 
-`main` is protected (pull requests only) and deployable; `dev` is the integration branch.
+`main` only changes through pull requests; day-to-day work goes to `dev`.
